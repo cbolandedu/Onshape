@@ -4,8 +4,8 @@
 
 const SITE = {
   title: "Onshape Tutorials",
-  subtitle: "Watch me model it, then practice it yourself — and learn to read the drawing.",
-  course: "ENGR 114 · Engineering Graphics · Whatcom Community College",
+  subtitle: "Let's Onshape!",
+  course: "Engineering Graphics",
   instructor: "Chloe",
 };
 
