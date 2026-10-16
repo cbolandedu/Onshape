@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How to Read a Drawing</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="primer">
+  <header class="site">
+    <div class="wrap">
+      <a class="brand" href="index.html"><span>⌖</span><span data-site-title style="color:inherit;font-family:inherit">Onshape Tutorials</span></a>
+      <nav><a href="index.html">Tutorials</a><a href="reading-drawings.html">How to read a drawing</a></nav>
+    </div>
+  </header>
+
+  <main class="wrap prose">
+    <section class="hero">
+      <span class="tag">Reference</span>
+      <h1>How to read an engineering drawing</h1>
+      <p>A drawing is a set of instructions for making a part. Use this checklist every time you open one of the drawings in these tutorials.</p>
+    </section>
+
+    <h2>1. Start with the title block</h2>
+    <p>Bottom-right corner. Before looking at the part, find:</p>
+    <ul>
+      <li><strong>Part name and number</strong>: what you're looking at.</li>
+      <li><strong>Units</strong>: inches or millimeters. Every number on the sheet depends on this.</li>
+      <li><strong>Scale</strong>: 1:1 is full size, 1:2 is half size. Never measure the paper; read the dimensions.</li>
+      <li><strong>Material</strong>, <strong>general tolerances</strong>, and the <strong>projection symbol</strong>.</li>
+    </ul>
+
+    <h2>2. Figure out the views</h2>
+    <p>US drawings use <strong>third-angle projection</strong>: imagine the part inside a glass box and you're looking at it from outside.</p>
+    <ul>
+      <li>The <strong>front view</strong> is the main one, usually showing the most detail.</li>
+      <li>The <strong>top view</strong> sits directly <em>above</em> the front view.</li>
+      <li>The <strong>right side view</strong> sits directly <em>to the right</em> of the front view.</li>
+      <li>Views line up: a feature's width matches between front and top; its height matches between front and side.</li>
+      <li>An <strong>isometric view</strong> (3D-looking) is there to help you picture it, and usually isn't dimensioned.</li>
+    </ul>
+    <p><strong>Tip:</strong> pick one feature, like a hole, and find it in every view. That's how you build the 3D shape in your head.</p>
+
+    <h2>3. Know your line types</h2>
+    <table>
+      <tr><th>Line</th><th>Looks like</th><th>Means</th></tr>
+      <tr><td>Visible</td><td><svg class="linesample" viewBox="0 0 120 14"><line x1="0" y1="7" x2="120" y2="7" stroke="currentColor" stroke-width="2.5"/></svg></td><td>Edges you can see from this viewpoint</td></tr>
+      <tr><td>Hidden</td><td><svg class="linesample" viewBox="0 0 120 14"><line x1="0" y1="7" x2="120" y2="7" stroke="currentColor" stroke-width="1.5" stroke-dasharray="8 4"/></svg></td><td>Edges behind the surface (inside holes, back features)</td></tr>
+      <tr><td>Center</td><td><svg class="linesample" viewBox="0 0 120 14"><line x1="0" y1="7" x2="120" y2="7" stroke="currentColor" stroke-width="1" stroke-dasharray="20 4 4 4"/></svg></td><td>Axis of a hole or cylinder, or a line of symmetry</td></tr>
+      <tr><td>Dimension / extension</td><td><svg class="linesample" viewBox="0 0 120 14"><line x1="4" y1="7" x2="116" y2="7" stroke="currentColor" stroke-width="1"/><path d="M4 7 l8 -3 v6z M116 7 l-8 -3 v6z" fill="currentColor"/></svg></td><td>Shows what a measurement applies to</td></tr>
+      <tr><td>Section / cutting plane</td><td><svg class="linesample" viewBox="0 0 120 14"><line x1="0" y1="7" x2="120" y2="7" stroke="currentColor" stroke-width="2.5" stroke-dasharray="22 4 5 4 5 4"/></svg></td><td>Where a section view was "sliced"; arrows show the viewing direction</td></tr>
+      <tr><td>Section hatching</td><td><svg class="linesample" viewBox="0 0 120 14"><g stroke="currentColor" stroke-width="1"><line x1="0" y1="14" x2="14" y2="0"/><line x1="12" y1="14" x2="26" y2="0"/><line x1="24" y1="14" x2="38" y2="0"/><line x1="36" y1="14" x2="50" y2="0"/><line x1="48" y1="14" x2="62" y2="0"/></g></svg></td><td>Solid material that was cut through in a section view</td></tr>
+    </table>
+
+    <h2>4. Read the dimensions</h2>
+    <table>
+      <tr><th>You see</th><th>It means</th></tr>
+      <tr><td><code>2.50</code></td><td>A length in the drawing's units</td></tr>
+      <tr><td><code>Ø.250</code></td><td>Diameter (holes, shafts)</td></tr>
+      <tr><td><code>R.125</code></td><td>Radius (fillets, rounded ends)</td></tr>
+      <tr><td><code>4X Ø.250</code></td><td>Four identical features with this callout</td></tr>
+      <tr><td><code>Ø.250 THRU</code></td><td>Hole goes all the way through</td></tr>
+      <tr><td><code>⌴ Ø.438 ↧ .125</code></td><td>Counterbore: a wider, shallow hole on top, with its diameter and depth</td></tr>
+      <tr><td><code>2.50 ±.01</code></td><td>Tolerance: anything from 2.49 to 2.51 is acceptable</td></tr>
+      <tr><td><code>(3.00)</code></td><td>Reference dimension: for information only, not for inspection</td></tr>
+    </table>
+
+    <h2>5. Check your understanding</h2>
+    <ul>
+      <li>Can you state the overall length, width, and height?</li>
+      <li>Can you find every hole in every view and say its size and whether it goes through?</li>
+      <li>Could you build the part from only this drawing, without the 3D model?</li>
+    </ul>
+    <p>Then head to a tutorial and try its <a href="index.html">practice questions</a>.</p>
+  </main>
+
+  <footer class="site"><div class="wrap">© <span data-year></span> <span data-instructor></span></div></footer>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
